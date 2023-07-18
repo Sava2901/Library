@@ -228,6 +228,52 @@ input:checked+.slider {
     align-self: center;
 }
 
+/*#region popUp*/
+.popUp {
+    z-index: 2;
+    position: fixed;
+    top: 25vh;
+    left: 75vh;
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: beige;
+}
+
+.popUp>* {
+    padding: 30px;
+}
+
+.popUpForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popUpForm>* {
+    height: 40px;
+    border-radius: 10px;
+}
+
+.popUpForm>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.popUpForm>*:last-child{
+    margin-top: 80px;
+}
+
+.inactive {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+/*#endregion popUp*/
+
 /*#region text*/
 .text {
     font-family: "Roboto Mono";
@@ -242,6 +288,16 @@ input:checked+.slider {
 .bigText {
     font-size: 2rem;
     color: #f7fdf7;
+}
+
+.buttonText {
+    font-family: "Roboto Mono";
+    font-size: 0.925rem;
+}
+
+.popUpText {
+    font-family: "Roboto Mono";
+    font-size: 2rem;
 }
 
 /*#endregion text*/
