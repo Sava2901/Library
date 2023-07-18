@@ -1,0 +1,247 @@
+html {
+    background-color: rgb(17, 85, 67);
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+/*#region homeButton*/
+
+
+.homeButton {
+    min-height: 50px;
+    min-width: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    background: #0f5238;
+    box-shadow: 14px 14px 28px #0d4630,
+        -14px -14px 28px #115e40;
+    background: url("./Images/home1.png");
+    background-size: cover;
+}
+
+.homeButton:hover {
+    background: url("./Images/home2.png");
+    background-size: cover;
+}
+
+.homeButton:active {
+    border-radius: 10px;
+    background: #0f5238;
+    box-shadow: inset 14px 14px 28px #0d4630,
+        inset -14px -14px 28px #115e40;
+    background: url("./Images/home2.png");
+    background-size: cover;
+}
+
+/*#endregion homeButton*/
+
+.newBook {
+    position: relative;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*#region newBookButton*/
+.newBookButton {
+    height: clamp(40px, 6vh, 6vh);
+    width: clamp(150px, 25vw, 25vw);
+    border: none;
+    border-radius: 50px;
+    background: #0f5238;
+    box-shadow: 20px 20px 60px #0d4630,
+        -20px -20px 60px #115e40;
+}
+
+.newBookButton:hover {
+    color: black;
+
+}
+
+.newBookButton:active {
+    border-radius: 50px;
+    background: #0f5238;
+    box-shadow: inset 20px 20px 60px #0d4630,
+        inset -20px -20px 60px #115e40;
+}
+
+/*#endregion newBookButton*/
+
+.main {
+    height: 75vh;
+}
+
+.background>img {
+    position: absolute;
+    height: 75vh;
+    width: 100vw;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    clip-path: inset(0 0 0 0);
+    object-fit: cover;
+}
+
+.content {
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content>* {
+    background-color: rgb(110, 110, 110, 0.3);
+    margin: 2vw;
+}
+
+.library {
+    position: relative;
+    z-index: 1;
+
+    flex-grow: 5;
+    min-width: 350px;
+    height: 66vh;
+    border-radius: 20px;
+
+    display: grid;
+    overflow: scroll;
+    overflow-x: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 1vh;
+}
+
+.book {
+    border: 2px solid #0d4630;
+    height: 200px;
+    background-color: rgb(110, 110, 110, 0.4);
+
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.book>* {
+    align-self: center;
+    justify-self: center;
+}
+
+.bookTitle {
+    grid-column: 2/3;
+}
+
+.bookAuthor {
+    grid-column: 2/3;
+}
+
+.bookPages {
+    grid-column: 2/3;
+}
+
+/*#region removeButton*/
+.readButton {
+    margin-top: -30px;
+
+    position: relative;
+
+    grid-column: 1/2;
+
+    height: 75%;
+    width: clamp(65px, 50%, 150px);
+}
+
+.readButton input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input:checked+.slider {
+    background-color: green;
+}
+
+/*#endregion removeButton*/
+
+
+/*#region removeButton*/
+.removeButton {
+    grid-column: 3/4;
+
+    height: 75%;
+    width: clamp(65px, 50%, 150px);
+
+
+    border-radius: 10px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+}
+
+.removeButton:hover {
+    background-color: rgb(255, 69, 69);
+}
+
+.removeButton:active {
+    background-color: rgb(201, 0, 0);
+}
+
+/*#endregion removeButton*/
+
+.stats {
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    min-width: 70px;
+    height: 50vh;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+/*#region text*/
+.text {
+    font-family: "Roboto Mono";
+    font-size: 1.3rem;
+    color: #f7fdf7;
+}
+
+.smallText {
+    font-size: 1rem;
+}
+
+.bigText {
+    font-size: 2rem;
+    color: #f7fdf7;
+}
+
+/*#endregion text*/
