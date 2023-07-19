@@ -124,6 +124,7 @@ body {
 
 .book {
     border: 2px solid #0d4630;
+    border-radius: 10px;
     height: 200px;
     background-color: rgb(110, 110, 110, 0.4);
 

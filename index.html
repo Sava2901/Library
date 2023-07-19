@@ -16,14 +16,14 @@
     <div class="navbar">
         <img src="./Images/Logo.png" alt="Logo">
         <p class="text bigText title">Library</p>
-        <form action="https://sava2901.github.io/odin-site/">
+        <form action="https://sava2901.github.io/odin-site/" method="get">
             <button class="text homeButton">
             </button>
         </form>
     </div>
 
     <div class="newBook">
-        <form action="#">
+        <form action="" method="get">
             <button class="text newBookButton">New Book</button>
         </form>
     </div>
@@ -37,27 +37,7 @@
         <div class="content">
 
             <div class="library">
-                <div class="book">
-                    <p class="bookTitle text">Title</p>
-                    <p class="bookAuthor text">Author</p>
-                    <p class="bookPages text">Pages</p>
-                    <label class="readButton">
-                        <input type="checkbox">
-                        <span class="buttonText OnOff">Read</span>
-                    </label>
-                    <button class="buttonText removeButton">Remove</button>
-                </div>
-
-                <div class="book">
-                    <p class="bookTitle text">Title</p>
-                    <p class="bookAuthor text">Author</p>
-                    <p class="bookPages text">Pages</p>
-                    <label class="readButton">
-                        <input type="checkbox">
-                        <span class="buttonText OnOff">Read</span>
-                    </label>
-                    <button class="buttonText removeButton">Remove</button>
-                </div>
+                
             </div>
 
             <div class="stats">
@@ -71,7 +51,7 @@
 
 
     <div class="modal">
-        <div class="popUp ">
+        <div class="popUp">
             <form class="popUpForm" action="#" method="get">
                 <p class="popUpText">Add new book</p>
                 <input type="text" name="title" id="title" placeholder="Title" required>
@@ -80,13 +60,13 @@
                 <div>
                     <p class="readQuestion">Have you read it?</p>
                     <label class="switch">
-                        <input type="checkbox" name="Read">
+                        <input class="read" type="checkbox" name="Read">
                         <span class="slider round"></span>
                     </label>
                 </div>
                 <div class="choiceButtons">
                     <button class="submitButton" type="submit">Submit</button>
-                    <button class="closePopUpButton" type="reset">Cancel</button>
+                    <input class="closePopUpButton" type="button" value="Cancel">
                 </div>
             </form>
         </div>
