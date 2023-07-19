@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="./css-reset.css">
     <link rel="stylesheet" href="./index-style.css">
-    <scrit src="./index-script.js" defer></scrit>
+    <script src="./index-script.js" defer></script>
     <title>Library</title>
 </head>
 
@@ -16,14 +16,14 @@
     <div class="navbar">
         <img src="./Images/Logo.png" alt="Logo">
         <p class="text bigText title">Library</p>
-        <form action="https://sava2901.github.io/odin-site/" method="get">
+        <form action="https://sava2901.github.io/odin-site/">
             <button class="text homeButton">
             </button>
         </form>
     </div>
 
     <div class="newBook">
-        <form action="#" method="get">
+        <form action="#">
             <button class="text newBookButton">New Book</button>
         </form>
     </div>
@@ -43,34 +43,53 @@
                     <p class="bookPages text">Pages</p>
                     <label class="readButton">
                         <input type="checkbox">
-                        <span class="buttonText slider">Read</span>
+                        <span class="buttonText OnOff">Read</span>
+                    </label>
+                    <button class="buttonText removeButton">Remove</button>
+                </div>
+
+                <div class="book">
+                    <p class="bookTitle text">Title</p>
+                    <p class="bookAuthor text">Author</p>
+                    <p class="bookPages text">Pages</p>
+                    <label class="readButton">
+                        <input type="checkbox">
+                        <span class="buttonText OnOff">Read</span>
                     </label>
                     <button class="buttonText removeButton">Remove</button>
                 </div>
             </div>
 
             <div class="stats">
-                <p class="text smallText">total books: 0</p>
-                <p class="text smallText">books read: 0</p>
-                <p class="text smallText">pages read: 0</p>
-                <p class="text smallText">total pages: 0</p>
+                <p class="text smallText allBooks">total books: 0</p>
+                <p class="text smallText readBooks">books read: 0</p>
+                <p class="text smallText totalPages">total pages: 0</p>
             </div>
         </div>
 
     </div>
 
-    <div class="popUp ">
-        <form class="popUpForm" action="#" method="get">
-            <p class="popUpText">Add new book</p>
-            <input type="text" name="Title" placeholder="Title">
-            <input type="text" name="Author" placeholder="Author">
-            <input type="number" name="Pages" placeholder="Pages">
-            <div>
-                <p>Have you read it?</p>
-                <input type="checkbox" name="Read">
-            </div>
-            <input type="submit" value="Submit">
-        </form>
+
+    <div class="modal">
+        <div class="popUp ">
+            <form class="popUpForm" action="#" method="get">
+                <p class="popUpText">Add new book</p>
+                <input type="text" name="title" id="title" placeholder="Title" required>
+                <input type="text" name="author" id="author" placeholder="Author" required>
+                <input type="number" name="pages" id="pages" placeholder="Pages" required>
+                <div>
+                    <p class="readQuestion">Have you read it?</p>
+                    <label class="switch">
+                        <input type="checkbox" name="Read">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="choiceButtons">
+                    <button class="submitButton" type="submit">Submit</button>
+                    <button class="closePopUpButton" type="reset">Cancel</button>
+                </div>
+            </form>
+        </div>
     </div>
 
 </body>

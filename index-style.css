@@ -153,12 +153,11 @@ body {
     grid-column: 2/3;
 }
 
-/*#region removeButton*/
+/*#region readButton*/
 .readButton {
-    margin-top: -30px;
-
     position: relative;
 
+    margin-top: -30px;
     grid-column: 1/2;
 
     height: 75%;
@@ -171,7 +170,7 @@ body {
     height: 0;
 }
 
-.slider {
+.OnOff {
     position: relative;
     background-color: red;
     height: 100%;
@@ -183,11 +182,11 @@ body {
     align-items: center;
 }
 
-input:checked+.slider {
+input:checked+.OnOff {
     background-color: green;
 }
 
-/*#endregion removeButton*/
+/*#endregion readButton*/
 
 
 /*#region removeButton*/
@@ -229,15 +228,23 @@ input:checked+.slider {
 }
 
 /*#region popUp*/
-.popUp {
-    z-index: 2;
+.modal{
     position: fixed;
-    top: 25vh;
-    left: 75vh;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUp {
     height: 500px;
     width: 400px;
     border-radius: 20px;
-    background-color: beige;
+    background-color: rgb(245,245,220);
 }
 
 .popUp>* {
@@ -262,15 +269,96 @@ input:checked+.slider {
     gap: 40px;
 }
 
-.popUpForm>*:last-child{
+.popUpForm>input{
+    padding-left: 20px;
+    font-family: "Roboto Mono";
+    font-size: medium;
+}
+
+.popUpText {
+    display: flex;
+    justify-content: center;
+}
+
+/*#region readButton*/
+
+
+.switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: green;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*#endregion readButton*/
+
+/* #region choiceButtons */
+
+.choiceButtons {
     margin-top: 80px;
 }
 
-.inactive {
-    opacity: 0;
-    user-select: none;
-    pointer-events: none;
+.choiceButtons>* {
+    width: 30%;
+    height: 80%;
+
+    border-radius: 7px;
+    border: 2px solid darkgray;
+    background-color: rgb(240,240,240);
 }
+
+.choiceButtons>*:hover{
+    background-color: rgb(255,255,255);
+}
+
+.choiceButtons>*:active{
+    background-color: rgb(200,200,200);
+}
+
+/* #endregion choiceButtons */
 
 /*#endregion popUp*/
 
